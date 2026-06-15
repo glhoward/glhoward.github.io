@@ -291,7 +291,7 @@ main section h2 {
   }
 
   .profile {
-    grid-template-columns: 155px minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
