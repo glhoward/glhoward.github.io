@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /space/blank
+
+Sitemap: https://greghoward.org/sitemap.xml

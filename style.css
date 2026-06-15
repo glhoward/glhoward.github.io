@@ -83,6 +83,10 @@ a:focus {
   color: var(--link);
 }
 
+.site-nav a[aria-current="page"] {
+  font-weight: 700;
+}
+
 .intro {
   max-width: 700px;
 }
@@ -193,17 +197,20 @@ p {
   margin: 0;
 }
 
-.abstract {
+.abstract,
+.bibtex {
   display: inline;
   margin: 0;
   color: var(--text);
 }
 
-.abstract[open] {
+.abstract[open],
+.bibtex[open] {
   flex-basis: 100%;
 }
 
-.abstract summary {
+.abstract summary,
+.bibtex summary {
   display: inline-block;
   cursor: pointer;
   color: var(--link);
@@ -214,16 +221,20 @@ p {
 }
 
 .abstract summary:hover,
-.abstract summary:focus {
+.abstract summary:focus,
+.bibtex summary:hover,
+.bibtex summary:focus {
   color: var(--link-hover);
 }
 
-.abstract summary::before {
+.abstract summary::before,
+.bibtex summary::before {
   content: "+ ";
   text-decoration: none;
 }
 
-.abstract[open] summary::before {
+.abstract[open] summary::before,
+.bibtex[open] summary::before {
   content: "- ";
 }
 
@@ -233,6 +244,23 @@ p {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.45;
+}
+
+.bibtex pre {
+  max-width: 100%;
+  margin: 0.38rem 0 0;
+  padding: 0.65rem 0.75rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: #f8f8f8;
+  color: var(--text);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  white-space: pre;
+}
+
+.bibtex code {
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .subheading {
